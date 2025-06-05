@@ -1,0 +1,26 @@
+/* Task 1: Positioning */
+
+/* Make <body> a flex container in column direction */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Make <main> a flex container in row direction */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+/* Give <article> 2/3 of the space */
+article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+/* Give <aside> 1/3 of the space */
+aside {
+    flex: 1;
+    overflow-y: auto; }
