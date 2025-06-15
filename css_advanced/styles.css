@@ -1,0 +1,382 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* Set default font for the body */
+}
+
+/* The main hero/banner section. This now handles the background image and overlay. */
+.background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/Object.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    /* All text within this section defaults to white */
+    padding-bottom: 0;
+    /* Ensures no default padding at the bottom of the section */
+}
+
+/* Header Styling - now a direct child of .hero */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.header a img {
+    height: 40px;
+}
+
+.header nav {
+    display: flex;
+    gap: 40px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: white;
+    /* Explicitly set for nav links, though inherited from .hero */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.header nav a:hover {
+    opacity: 0.7;
+}
+
+/* Main content area within the Hero section */
+main {
+    /* max-width: 900px; */
+    /* Constrain width of main content */
+    margin: 0 auto;
+    /* Center the main content area */
+    text-align: center;
+    /* Center all text content within the main area */
+    /* color: white; <-- Removed as it's now on .hero directly */
+}
+
+/* Hero Content Styling (H1, SPANS, BUTTON) - child of main */
+.hero-content {
+    padding-top: 80px;
+    /* Top padding to push content down from header */
+    padding-bottom: 250px;
+    /* Padding below the button to separate from next section */
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content span {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.hero-content button {
+    background-color: #C271FF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius:22px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    /* This margin pushes the button down from the spans */
+    transition: opacity 0.3s ease;
+}
+
+.hero-content button span {
+    color: white;
+}
+
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
+/* Learn From The Pros Section Styling - Using your class names */
+.pros {
+    /* Your class name */
+    padding-bottom: 80px;
+    /* Padding at the very bottom of the banner section */
+}
+
+.pros h2 {
+    font-size: 32px;
+    font-weight: lighter;
+    margin-top: 0;
+    /* Remove default h2 top margin, spacing handled by hero-content padding-bottom */
+    margin-bottom: 50px;
+}
+
+.pros h2 span {
+    color: #C271FF;
+}
+
+/* Container for the four profiles - Using your class name */
+.pros-list {
+    /* Your class name */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Individual profile card styling - Targeting divs directly under .pros-list */
+.pros-list div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+    margin: 50px;
+}
+
+.pros-list div img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.pros-list div h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.pros-list div p {
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.quote {
+    background-color: #C271FF; /* This is the purple color from the design */
+    color: white; /* All text within this section should be white */
+    display: flex; /* Use Flexbox to put the image and text side-by-side */
+    justify-content: center; /* Center the entire content block horizontally */
+    align-items: center; /* Vertically align items in the middle of the section */
+    padding: 100px 20px; /* Add vertical padding and some side padding for responsiveness */
+    gap: 50px; /* This creates space between the image and the text content */
+}
+
+.quote-text blockquote {
+    font-size: 22px; /* Makes the quote text larger */
+    font-style: italic; /* Sets the quote text to italic */
+    margin: 0; /* Removes default margins and adds space below the quote */
+    /* Color is inherited from .quote-section (white) */
+}
+
+.quote-text h4 {
+    font-size: 22px;
+    margin-top: 28px;
+}
+
+.quote-text p {
+    font-size: 22px;
+    opacity: 0.8;
+    margin-top: -18px;
+}
+
+/* Most Popular Tutorials Section */
+
+.tutorials {
+    padding: 80px 20px; /* Targeting the main section with its new class */
+    text-align: center; /* Add some vertical padding for spacing */
+    background-color: white; /* Ensure a white background for this section */
+}
+
+.tutorials h2 {
+    font-size: 32px; /* Set the font size for the main heading */
+    font-weight: lighter; /* Make it lighter as per the design */
+    margin-bottom: 50px; /* Add space below the heading */
+    color: #000; /* Ensure text is black */
+}
+
+.tutorials h2 span {
+    color: #C271FF; /* Make popular purple */
+    font-weight: bold; /* Make popular bold */
+}
+
+.tutorial-videos {
+    display: flex; /* Make all the tutorial videos align horizontally */
+    justify-content: center; /* Center the items horizontally within the container */
+    gap: 30px; /* Add space between the individual video cards */
+    max-width: 1000px; /* Limit the maximum width of the card container */
+    margin: auto; /* Center the container itself on the page */
+}
+
+.video-card {
+    display: flex; /* Makes the video-card a flex container */
+    flex-direction: column; /* Arranges its direct children (img, h3, p, video-author, video-rating, video-duration) vertically */
+    flex: 1 1 220px; /* Allows cards to grow, shrink, and have a base width */
+    justify-content: space-between; /* Distributes space vertically, pushing the author/rating/duration towards the bottom */
+    max-width: 250px; /* Maximum width for each card */
+    text-align: left; /* Align text within each card to the left */
+    background-color: white; /* Ensure white background if needed */
+    margin-bottom: 20px; /* Add space between rows when wrapped */
+    padding: 10px; /* Add padding to the video card itself to give internal spacing */
+}
+
+
+.video-card img[alt^="Video Thumbnail"] { /* Selects images whose alt text starts with "Video Thumbnail" */
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slightly rounded corners for the video thumbnails */
+    margin-bottom: 10px; /* Add a consistent space below the thumbnail */
+}
+
+.video-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px; /* Space above the title */
+    margin-bottom: 5px; /* Space below the title */
+    color: #000;
+}
+
+.video-card p {
+    font-size: 14px;
+    color: #717171; /* A lighter gray for the description */
+    line-height: 1.5; /* Improve readability */
+    margin-bottom: 15px;
+}
+
+.video-author {
+    display: flex; /* Use flexbox to align image and name */
+    align-items: center; /* Vertically center image and text */
+    gap: 10px; /* Space between image and name */
+    margin-top: auto; /* This pushes the video-author block to the bottom of the available space within the .video-card. */
+    margin-bottom: 10px; /* Add a consistent space below the author block */
+    flex-shrink: 0; /* Prevents this element from shrinking if space is tight within the parent flex container. */
+}
+
+.video-author img {
+    width: 30px;
+    height: 30px;
+}
+
+.video-author h6 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #C271FF; /* Purple color for author name */
+} 
+
+.video-rating {
+    display: flex;
+    margin-top: -20px; /* Make the stars close to the author images */
+    gap: 2px;
+    align-items: center;
+}
+
+.video-rating img {
+    width: 12px; /* Adjust star size */
+    height: auto; /* Maintains the image's aspect ratio. */
+}
+
+
+.video-rating p {
+    font-size: 12px; /* Sets a smaller font size for the duration text. */
+    font-weight: bold;
+    color: #C271FF; /* Sets a lighter gray color for the duration text. */
+    margin: 0; /* Removes default margins from the paragraph. */
+    margin-left: 100px; /* This pushes the paragraph to the far right within the flex container. */
+}
+
+.membership {
+    background-color: #071629; /* A dark blue-purple from the design */
+    color: white; /* All text within this section will be white by default */
+    padding: 80px 20px; /* Add vertical and horizontal padding for spacing */
+    text-align: center; /* Center all inline content, including the heading and button */
+}
+
+.membership h2 {
+    font-size: 32px; /* Set a prominent font size */
+    font-weight: 300; /* Use a lighter font weight (similar to "Learn From The Pros") */
+    margin-bottom: 50px; /* Add space below the heading to separate it from the content blocks */
+    margin-top: 0; /* Remove default top margin if any */
+}
+
+.membership span {
+    color: #C271FF;
+}
+
+.membership-benefits {
+    display: flex; /* Turn on Flexbox to arrange items horizontally */
+    justify-content: center; /* Center the items horizontally within their container */
+    gap: 30px; /* Add space between the individual benefit blocks */
+    max-width: 1000px; /* Limit the maximum width of the container for better readability */
+    margin: auto; /* Center the container, and add space below it to separate from the button */
+}
+
+.benefit-description {
+    flex: 1 1 200px; /* Allows cards to grow, shrink, and have a base width of 200px */
+    max-width: 250px; /* Sets a maximum width to prevent them from getting too wide */
+    padding: 20px; /* Add some internal padding */
+    text-align: center; /* Center the content (image, h6, p) within each card */
+    margin-bottom: 20px; /* Add space between rows when they wrap */
+    /* No explicit background color needed as it inherits from .membership */
+}
+
+.benefit-description img {
+    width: 50px; /* Adjust size of the smiley face */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.benefit-description h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.benefit-description p {
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 1.5; /* Improve readability */
+    opacity: 0.8; /* Make it slightly less prominent */
+    margin: 0;
+}
+
+.membership button {
+    background-color: #C271FF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 40px; /* This margin pushes the button down from the spans */
+    transition: opacity 0.3s ease;
+}
+
+.membership button span {
+    color: white;
+}
+
+.membership button:hover {
+    opacity: 0.9;
+}
