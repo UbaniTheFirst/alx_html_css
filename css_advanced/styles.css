@@ -1,21 +1,42 @@
 @font-face {
     font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
     src: url('SourceSansPro-Regular.otf') format('opentype');
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-It.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Semibold.otf') format('opentype');
+    font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Source Sans Pro';
     src: url('SourceSansPro-Bold.otf') format('opentype');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
 }
 
 body {
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    /* Set default font for the body */
+    font-family: 'Source Sans Pro', sans-serif; /* Set default font for the body */
+    font-weight: 400;
 }
 
 /* The main hero/banner section. This now handles the background image and overlay. */
@@ -44,7 +65,7 @@ body {
 
 .header nav {
     display: flex;
-    gap: 40px;
+    gap: 50px;
 }
 
 .header nav a {
@@ -53,7 +74,7 @@ body {
     /* Explicitly set for nav links, though inherited from .hero */
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
     transition: opacity 0.3s ease;
 }
 
@@ -81,21 +102,21 @@ main {
 }
 
 .hero-content h1 {
-    font-size: 60px;
-    font-weight: bold;
+    font-size: 80px;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 .hero-content span {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     margin: 0 10px;
 }
 
 .hero-content button {
     background-color: #C271FF;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     padding: 15px 30px;
     border: none;
     border-radius:22px;
@@ -124,9 +145,8 @@ main {
 
 .pros h2 {
     font-size: 32px;
-    font-weight: lighter;
-    margin-top: 0;
-    /* Remove default h2 top margin, spacing handled by hero-content padding-bottom */
+    font-weight: 300;
+    margin-top: 0; /* Remove default h2 top margin, spacing handled by hero-content padding-bottom */
     margin-bottom: 50px;
 }
 
@@ -210,14 +230,14 @@ main {
 
 .tutorials h2 {
     font-size: 32px; /* Set the font size for the main heading */
-    font-weight: lighter; /* Make it lighter as per the design */
+    font-weight: 300; /* Make it lighter as per the design */
     margin-bottom: 50px; /* Add space below the heading */
     color: #000; /* Ensure text is black */
 }
 
 .tutorials h2 span {
     color: #C271FF; /* Make popular purple */
-    font-weight: bold; /* Make popular bold */
+    font-weight: 700; /* Make popular bold */
 }
 
 .tutorial-videos {
@@ -250,7 +270,7 @@ main {
 
 .video-card h3 {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 15px; /* Space above the title */
     margin-bottom: 5px; /* Space below the title */
     color: #000;
@@ -258,7 +278,7 @@ main {
 
 .video-card p {
     font-size: 14px;
-    color: #717171; /* A lighter gray for the description */
+    color: #717171; /* A lighter gray for the-content */
     line-height: 1.5; /* Improve readability */
     margin-bottom: 15px;
 }
@@ -279,7 +299,7 @@ main {
 
 .video-author h6 {
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     color: #C271FF; /* Purple color for author name */
 } 
 
@@ -298,7 +318,7 @@ main {
 
 .video-rating p {
     font-size: 12px; /* Sets a smaller font size for the duration text. */
-    font-weight: bold;
+    font-weight: 700;
     color: #C271FF; /* Sets a lighter gray color for the duration text. */
     margin: 0; /* Removes default margins from the paragraph. */
     margin-left: 100px; /* This pushes the paragraph to the far right within the flex container. */
@@ -330,7 +350,7 @@ main {
     margin: auto; /* Center the container, and add space below it to separate from the button */
 }
 
-.benefit-description {
+.benefit-content {
     flex: 1 1 200px; /* Allows cards to grow, shrink, and have a base width of 200px */
     max-width: 250px; /* Sets a maximum width to prevent them from getting too wide */
     padding: 20px; /* Add some internal padding */
@@ -339,21 +359,21 @@ main {
     /* No explicit background color needed as it inherits from .membership */
 }
 
-.benefit-description img {
+.benefit-content img {
     width: 50px; /* Adjust size of the smiley face */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 20px; /* Space below the image */
 }
 
-.benefit-description h6 {
+.benefit-content h6 {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     margin: 20px;
 }
 
-.benefit-description p {
+.benefit-content p {
     font-size: 14px;
-    font-weight: lighter;
+    font-weight: 300;
     line-height: 1.5; /* Improve readability */
     opacity: 0.8; /* Make it slightly less prominent */
     margin: 0;
@@ -362,7 +382,7 @@ main {
 .membership button {
     background-color: #C271FF;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     padding: 15px 30px;
     border: none;
     border-radius: 22px;
@@ -379,4 +399,109 @@ main {
 
 .membership button:hover {
     opacity: 0.9;
+}
+
+.faq {
+    background-color: white; /* Ensure a white background */
+    color: #000; /* Default text color is black */
+    padding: 80px 20px; /* Add vertical and horizontal padding */
+    text-align: center; /* Center all inline content, including the heading */
+}
+
+.faq h2 {
+    font-size: 60px; /* Set a prominent font size */
+    font-weight: 300; /* Lighter font weight for the heading */
+    margin-bottom: 50px; /* Add space below the heading to separate it from the content */
+    margin-top: 0; /* Remove default top margin if any */
+}
+
+.faq-content {
+    display: flex; /* Enables Flexbox to arrange its children horizontally */
+    justify-content: center; /* Centers the columns horizontally */
+    gap: 100px; /* Adds a large gap between the two columns */
+    max-width: 1000px; /* Limits the overall width of the FAQ content */
+    margin: auto; /* Centers the FAQ content container on the page */
+    padding-top: 20px; /* Add some space between heading and content */
+}
+
+.faq-column {
+    flex: 1 1 400px; /* Each column will try to be 400px wide, can grow/shrink */
+    max-width: 500px; /* Maximum width for each column */
+    text-align: left; /* Align text within columns to the left */
+    margin-bottom: 30px; /* Add space between columns if they wrap */
+}
+
+.faq-item {
+    margin-bottom: 40px; /* Add space below each Q&A block */
+    padding: 0 10px; /* Small horizontal padding within the item */
+}
+
+.faq-item h4 {
+    font-size: 16px; /* Font size for the question */
+    font-weight: 700; /* Make the question bold */
+    margin-bottom: 15px; /* Space below the question, separating it from the answer */
+    color: #000; /* Ensure black text */
+    margin-top: 0; /* Remove default top margin */
+}
+
+.faq-item p {
+    font-size: 14px; /* Font size for the answer */
+    line-height: 1.8; /* Increase line height for readability */
+    color: #071629; /* Lighter gray color for the answer text */
+    margin: 0; /* Remove default margins */
+}
+
+.footer {
+    background-color: #071629; /* The dark background color from the design */
+    color: white; /* All text within the footer should be white */
+    padding: 60px 20px; /* Add vertical and horizontal padding for spacing */
+    text-align: center; /* Center content horizontally within the footer */
+}
+
+.footer-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks its children vertically */
+    align-items: center; /* Horizontally centers content within the footer-content */
+    max-width: 1000px; /* Limits the overall width for readability */
+    margin: 0 auto; /* Centers the footer content block */
+    gap: 30px; /* Space between the logo/socials row and the copyright text */
+}
+
+.footer-assets {
+    display: flex; /* Enables Flexbox to arrange logo and social icons horizontally */
+    justify-content: space-between; /* Pushes logo to left, social icons to right */
+    align-items: center; /* Vertically centers the logo and social icons */
+    width: 100%; /* Make it take full width of its parent (.footer-content) */
+    padding: 0 20px; /* Add some horizontal padding inside */
+}
+
+.footer-assets img {
+    height: 40px; /* Set a specific height for the footer logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.footer-social-icons {
+    display: flex; /* Enables Flexbox for the icons */
+    gap: 15px; /* Space between individual social icons */
+}
+
+.footer-social-icons img {
+    width: 30px; /* Set a fixed size for the social icons */
+    height: 30px;
+}
+
+.footer-social-icons a:hover {
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.footer-copyright {
+    padding-top: 40px; /* Add a little space above the copyright text, if gap isn't enough */
+}
+
+.footer-copyright p {
+    font-size: 12px; /* Set the font size for the copyright text */
+    font-weight: 400; /* Regular font weight */
+    opacity: 0.7; /* Make it slightly lighter */
+    margin: 0; /* Remove default paragraph margins */
 }
