@@ -1,0 +1,488 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-It.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* Set default font for the body */
+    font-weight: 400;
+}
+
+.background {
+    background-image: url(assets/headphones_hero_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding-bottom: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+}
+
+.header a img {
+    height: 40px;
+}
+
+.header nav {
+    display: flex;
+    gap: 50px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: white;
+    /* Explicitly set for nav links, though inherited from .hero */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.header nav a:hover {
+    opacity: 0.9;
+    color: #FF6565;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content {
+    padding-top: 350px;
+    /* Top padding to push content down from header */
+    padding-bottom: 80px;
+    /* Padding below the button to separate from next section */
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: -10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hero-content button {
+    background-color: #FF6565;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    /* This margin pushes the button down from the spans */
+    transition: opacity 0.3s ease;
+}
+
+.hero-content button span {
+    color: white;
+}
+
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
+.hero-content p:nth-of-type(2) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 150px auto 0;
+    max-width: 700px;
+    text-align: center;
+}
+
+.what-we-do-section {
+    margin-top: 200px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.what-we-do-section p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6em;
+    max-width: 800px;
+    margin: 0 auto 80px;
+    /* centers block & adds bottom space */
+}
+
+.icons-descriptions-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.icon-description {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    align-items: center;
+}
+
+.icon-description img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.icon-description p {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.background-2 {
+    background-image: url(assets/headphones_hero_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    padding-bottom: 0;
+}
+
+.our-results-section {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    padding-top: 200px;
+    padding-bottom: 80px;
+    text-align: center;
+
+}
+
+.our-results-section p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6em;
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+
+.pentagons-descriptions-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.pentagon-description {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    align-items: center;
+}
+
+.pentagon-description img {
+    margin-bottom: 20px;
+}
+
+.pentagon-description p {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.contact-us-section {
+    margin-top: 150px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.line-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.horizontal-line hr {
+    width: 500px;
+    height: 0.8px;
+    background-color: lightslategray;
+    border: none;
+    margin: 80px 0px;
+    /* spacing between lines */
+}
+
+.horizontal-line hr:last-child {
+    margin-bottom: 0; }
+
+.contact-us-section button {
+    background-color: #FF6565;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    /* This margin pushes the button down from the spans */
+    transition: opacity 0.3s ease;
+}
+
+.contact-us-section button span {
+    color: white;
+}
+
+.footer {
+    background-color: #071629;
+    /* The dark background color from the design */
+    color: white;
+    /* All text within the footer should be white */
+    padding: 50px 20px;
+    /* Add vertical and horizontal padding for spacing */
+    text-align: center;
+    /* Center content horizontally within the footer */
+}
+
+.footer-container {
+    display: flex;
+    /* Enables Flexbox */
+    flex-direction: column;
+    /* Stacks its children vertically */
+    align-items: center;
+    /* Horizontally centers content within the footer-content */
+    /* max-width: 1000px; */
+    /* Limits the overall width for readability */
+    margin: 0 auto;
+    /* Centers the footer content block */
+    gap: 30px;
+    /* Space between the logo/socials row and the copyright text */
+    padding: 30px 80px;
+}
+
+.footer-logo-icons {
+    display: flex;
+    /* Enables Flexbox to arrange logo and social icons horizontally */
+    justify-content: space-between;
+    /* Pushes logo to left, social icons to right */
+    align-items: center;
+    /* Vertically centers the logo and social icons */
+    width: 100%;
+    /* Make it take full width of its parent (.footer-content) */
+}
+
+
+
+.footer-logo-icons a img {
+    height: 40px;
+    /* Set a specific height for the footer logo */
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+.footer-social-icons {
+    display: flex;
+    /* Enables Flexbox for the icons */
+    gap: 15px;
+    /* Space between individual social icons */
+}
+
+.footer-social-icons a img {
+    width: 30px;
+    /* Set a fixed size for the social icons */
+    height: 30px;
+}
+
+.footer-social-icons a:hover {
+    opacity: 0.8;
+    /* Slightly reduce opacity on hover */
+    transition: opacity 0.3s ease;
+    /* Smooth transition */
+}
+
+.footer-copyright {
+    padding-top: 40px;
+    /* Add a little space above the copyright text, if gap isn't enough */
+}
+
+.footer-copyright p {
+    font-size: 12px;
+    /* Set the font size for the copyright text */
+    font-weight: 400;
+    /* Regular font weight */
+    opacity: 0.7;
+    /* Make it slightly lighter */
+    margin: 0;
+    /* Remove default paragraph margins */
+}
+
+/* --- Mobile-Friendly Styles --- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        /* Stack logo and nav vertically */
+        padding: 20px 20px;
+        /* Adjust header padding for smaller screens */
+    }
+
+    .header nav {
+        margin-top: 20px;
+        /* Add space between logo and nav */
+        flex-direction: column;
+        /* Stack nav links vertically */
+        gap: 15px;
+        /* Reduce gap between nav links */
+    }
+
+    .hero-content {
+        padding-top: 150px;
+        /* Reduce top padding for hero content */
+        padding-bottom: 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        /* Smaller font size for hero title */
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        /* Smaller font size for hero paragraphs */
+    }
+
+    .hero-content p:nth-of-type(2) {
+        font-size: 14px;
+        /* Smaller font size for the long paragraph */
+        margin-top: 50px;
+        /* Adjust margin */
+        padding: 0 15px;
+        /* Add horizontal padding for better readability */
+    }
+
+    .what-we-do-section,
+    .our-results-section,
+    .contact-us-section {
+        margin-top: 100px;
+        /* Reduce top margin for sections */
+        margin-bottom: 50px;
+        /* Reduce bottom margin for sections */
+    }
+
+    .what-we-do-section p,
+    .our-results-section p {
+        font-size: 16px;
+        /* Adjust paragraph font size */
+        margin-bottom: 40px;
+        /* Adjust bottom margin */
+        padding: 0 15px;
+        /* Add horizontal padding for better readability */
+    }
+
+    .icons-descriptions-container,
+    .pentagons-descriptions-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        gap: 40px;
+        /* Reduce gap between stacked items */
+        align-items: center;
+        /* Center items when stacked */
+    }
+
+    .icon-description,
+    .pentagon-description {
+        max-width: 80%;
+        /* Allow descriptions to take more width */
+    }
+
+    .horizontal-line hr {
+        width: 80%;
+        /* Make horizontal lines responsive */
+        margin: 40px auto;
+        /* Adjust margin and center */
+    }
+
+    .footer-container {
+        padding: 20px 20px;
+        /* Adjust footer padding */
+    }
+
+    .footer-logo-icons {
+        flex-direction: column;
+        /* Stack logo and social icons */
+        gap: 20px;
+        /* Add space between them */
+    }
+
+    .footer-copyright {
+        padding-top: 20px;
+        /* Adjust padding for copyright */
+    }
+}
+
+/* --- Further adjustments for very small screens (e.g., phones) --- */
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-content button {
+        padding: 12px 25px;
+    }
+
+    .what-we-do-section p,
+    .our-results-section p {
+        font-size: 14px;
+    }
+
+    .horizontal-line hr {
+        width: 90%;
+    }
+}
